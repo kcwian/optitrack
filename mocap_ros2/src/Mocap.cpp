@@ -116,10 +116,34 @@ bool Mocap::getLatestPose(Eigen::Vector3d &retPos, Eigen::Quaterniond &retOrient
         retOrient.z() = rigidBodies.front().orientation().qz;
         retOrient.w() = rigidBodies.front().orientation().qw;
     }
-    //else
-	//{
-	//cout << "Nie dziala" << endl;
-	//}
+
+    return mocapFrameValid;
+}
+
+bool Mocap::getLatestPose(Eigen::Vector3d &retPos, Eigen::Quaterniond &retOrient, int id) {
+    MocapFrame mocapFrame(frameListener->pop(&mocapFrameValid).first);
+    
+    if (mocapFrameValid) {
+        
+        bool rbFound = false;
+        const std::vector<RigidBody> &rigidBodies = mocapFrame.rigidBodies();
+        for(const RigidBody &rb : rigidBodies) {
+            if(id == rb.id()) {
+                //cout << rigidBodies.size() << endl;
+                retPos.x() = rb.location().x;
+                retPos.y() = rb.location().y;
+                retPos.z() = rb.location().z;
+                retOrient.x() = rb.orientation().qx;
+                retOrient.y() = rb.orientation().qy;
+                retOrient.z() = rb.orientation().qz;
+                retOrient.w() = rb.orientation().qw;
+                
+                rbFound = true;
+            }
+        }
+        return rbFound;
+    }
+    
     return mocapFrameValid;
 }
 
