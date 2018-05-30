@@ -4,3 +4,6 @@
 [submodule "imu_adis"]
 	path = imu_adis
 	url = https://github.com/jakublamprecht/imu_adis.git
+[submodule "deimos-ros"]
+	path = deimos-ros
+	url = https://github.com/i3drobotics/deimos-ros.git
