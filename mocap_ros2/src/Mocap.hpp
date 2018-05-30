@@ -40,6 +40,10 @@ public:
 
     bool getLatestPose(Eigen::Vector3d& retPos,
                         Eigen::Quaterniond& retOrient);
+    
+    bool getLatestPose(Eigen::Vector3d& retPos,
+                       Eigen::Quaterniond& retOrient,
+                       int id);
 private:
     void readOpts(int argc, char* argv[]);
 
