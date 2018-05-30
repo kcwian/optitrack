@@ -1,3 +1,6 @@
 [submodule "imu_3dm_gx4"]
 	path = imu_3dm_gx4
 	url = https://github.com/jakublamprecht/imu_3dm_gx4.git
+[submodule "imu_adis"]
+	path = imu_adis
+	url = https://github.com/jakublamprecht/imu_adis.git

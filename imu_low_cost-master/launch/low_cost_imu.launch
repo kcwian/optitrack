@@ -1,0 +1,7 @@
+<launch>
+
+	<node name = "low_cost_imu_node" 
+	type="lowCostImu" 
+	pkg="low_cost_imu" />
+
+</launch>
