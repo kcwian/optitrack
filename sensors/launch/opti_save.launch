@@ -1,6 +1,6 @@
 <launch>
 
 	<node pkg="rosbag" type="record" name="optitrack_mocap_rosbag"
-      	 args="record /optitrack /lowCostImu/imu /imu/data /imu/imu /imu/adis"/>	
+      	 args="record /mocap_node/optitrack0 /mocap_node/optitrack1 /low_cost/imu /xsens/imu /microstrain/imu /adis/imu"/>	
 
 </launch>
