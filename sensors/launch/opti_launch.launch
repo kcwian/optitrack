@@ -9,8 +9,8 @@
 	<include file="$(find low_cost_imu)/launch/low_cost_imu.launch">
 	</include>
 
-	!!!<include file="$(find xsens_driver)/launch/xsens_driver.launch">
-	!!!</include>
+	<include file="$(find xsens_driver)/launch/xsens_driver.launch">
+	</include>
 
 	<include file="$(find imu_adis)/launch/imu_adis.launch">
 	</include>
