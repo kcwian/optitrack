@@ -32,7 +32,7 @@ $ rostopic echo /mocap_node/optitrack0
 
 ### 4. Uruchomienie węzła Optitrack wraz z czujnikami IMU (xsens, microstrain, adis, low_cost)
 
-#### Należy zmodyfikować plik opti_launch.launch w folderze sensors:
+#### Należy zmodyfikować plik opti_launch.launch w folderze sensors/launch:
 -	args = "-l 192.168.100.xxx -s 192.168.100.xxx"
 
 gdzie:  
@@ -46,10 +46,9 @@ $ roslaunch sensors opti_launch.launch
 #### Wyświetlenie listy dostępnych topic'ów:
 ```
 $ rostopic list
-
+$ rostopic echo /mocap_node/optitrack0
 ```
 ### 5. Zapisywanie danych do pliku .bag
 ```
 $ roslaunch opti_save.launch
 ```
-
