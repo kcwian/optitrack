@@ -7,3 +7,6 @@
 [submodule "deimos-ros"]
 	path = deimos-ros
 	url = https://github.com/i3drobotics/deimos-ros.git
+[submodule "see3cam"]
+	path = see3cam
+	url = https://github.com/LRMPUT/see3cam.git

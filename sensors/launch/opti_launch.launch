@@ -1,6 +1,6 @@
 <launch>
 
-	<node name = "mocap_node" type="mocap_ros2" pkg="mocap_ros2" args = "-l 192.168.100.102 -s 192.168.100.101" output="screen"> <param name="nbodies" value="2" />
+	<node name = "mocap_node" type="mocap_ros2" pkg="mocap_ros2" args = "-l 192.168.100.102 -s 192.168.100.100" output="screen"> <param name="nbodies" value="2" />
 	</node>
 
 	<include file="$(find imu_3dm_gx4)/launch/imu.launch">
@@ -9,10 +9,13 @@
 	<include file="$(find low_cost_imu)/launch/low_cost_imu.launch">
 	</include>
 
-	<include file="$(find xsens_driver)/launch/xsens_driver.launch">
-	</include>
+	!!!<include file="$(find xsens_driver)/launch/xsens_driver.launch">
+	!!!</include>
 
 	<include file="$(find imu_adis)/launch/imu_adis.launch">
+	</include>
+
+	<include file="$(find uvc_camera)/launch/tara_launch.launch">
 	</include>
 
  	<node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 /baselink /imu_microstrain 100" />
