@@ -3,10 +3,10 @@
 ### 1. Pobranie repozytorium Git:
 ```
 $ git clone --recurse-submodules https://github.com/kcwian/optitrack.git
-
 ```
 ### 2. Kompilacja węzła
 ```
+$ cd ~/catkin_ws
 $ catkin_make
 $ source devel/setup.bash
 ```
